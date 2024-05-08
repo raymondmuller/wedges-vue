@@ -2,7 +2,6 @@
   "name": "wedges-vue",
   "type": "module",
   "version": "0.1.0",
-  "private": true,
   "exports": {
     ".": {
       "types": "./dist/main.d.ts",
