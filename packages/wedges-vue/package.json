@@ -1,0 +1,41 @@
+{
+  "name": "wedges-vue",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/wedges-vue.js",
+      "require": "./dist/wedges-vue.umd.cjs"
+    },
+    "./utils": "./src/lib/utils.ts"
+  },
+  "main": "./dist/wedges-vue.umd.cjs",
+  "module": "./dist/wedges-vue.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@iconicicons/vue3": "^1.5.1",
+    "@lemonsqueezy/wedges": "^1.2.2",
+    "@vueuse/core": "^10.9.0",
+    "radix-vue": "^1.7.4",
+    "vue": "^3.4.27"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/tsconfig": "^0.5.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vue-tsc": "^2.0.16"
+  }
+}

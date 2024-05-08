@@ -1,0 +1,78 @@
+{
+  "module": "preserve",
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": [
+        "docs/src/*"
+      ]
+    },
+    "types": [
+      "unplugin-icons/types/vue",
+      "node"
+    ],
+    "declaration": false,
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "include": [
+    "docs/src",
+    ".vitepress/**/*.vue",
+    ".vitepress/**/*.mts",
+    ".vitepress/**/*.ts",
+    "docs/src/lib/**/*",
+    ".vitepress/theme/components/ui/checkbox",
+    ".vitepress/theme/components/ui/collapsible",
+    ".vitepress/theme/components/ui/command",
+    ".vitepress/theme/components/ui/context-menu",
+    ".vitepress/theme/components/ui/dialog",
+    ".vitepress/theme/components/ui/drawer",
+    ".vitepress/theme/components/ui/avatar",
+    ".vitepress/theme/components/ui/badge",
+    ".vitepress/theme/components/ui/breadcrumb",
+    ".vitepress/theme/components/ui/button",
+    ".vitepress/theme/components/ui/calendar",
+    ".vitepress/theme/components/ui/card",
+    ".vitepress/theme/components/ui/alert",
+    ".vitepress/theme/components/ui/alert-dialog",
+    ".vitepress/theme/components/ui/aspect-ratio",
+    ".vitepress/theme/components/ui/carousel",
+    ".vitepress/theme/components/ui/accordion",
+    ".vitepress/theme/components/ui/dropdown-menu",
+    ".vitepress/theme/components/ui/form",
+    ".vitepress/theme/components/ui/hover-card",
+    ".vitepress/theme/components/ui/input",
+    ".vitepress/theme/components/ui/label",
+    ".vitepress/theme/components/ui/menubar",
+    ".vitepress/theme/components/ui/navigation-menu",
+    ".vitepress/theme/components/ui/pagination",
+    ".vitepress/theme/components/ui/pin-input",
+    ".vitepress/theme/components/ui/popover",
+    ".vitepress/theme/components/ui/progress",
+    ".vitepress/theme/components/ui/radio-group",
+    ".vitepress/theme/components/ui/resizable",
+    ".vitepress/theme/components/ui/scroll-area",
+    ".vitepress/theme/components/ui/select",
+    ".vitepress/theme/components/ui/separator",
+    ".vitepress/theme/components/ui/sheet",
+    ".vitepress/theme/components/ui/skeleton",
+    ".vitepress/theme/components/ui/slider",
+    ".vitepress/theme/components/ui/sonner",
+    ".vitepress/theme/components/ui/switch",
+    ".vitepress/theme/components/ui/table",
+    ".vitepress/theme/components/ui/tabs",
+    ".vitepress/theme/components/ui/tags-input",
+    ".vitepress/theme/components/ui/textarea",
+    ".vitepress/theme/components/ui/toast",
+    ".vitepress/theme/components/ui/toggle",
+    ".vitepress/theme/components/ui/toggle-group",
+    ".vitepress/theme/components/ui/tooltip"
+  ]
+}
