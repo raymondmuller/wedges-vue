@@ -1,19 +1,19 @@
 <p align="center">
-  <a href="https://lemonsqueezy.com/wedges">
+  <a href="https://wedges-vue.pages.dev">
       <img width="100%" src="https://github.com/lmsqueezy/wedges/blob/c47d43f8c76271381e812a357628fe3d3b076f25/apps/docs/public/images/banner.webp" alt="Wedges UI library" />
   </a>
 </p>
 
 # Wedges
 
-[![](https://img.shields.io/npm/v/@lemonsqueezy/wedges?style=plastic)](https://www.npmjs.com/package/@lemonsqueezy/wedges)
-[![](https://img.shields.io/npm/dw/@lemonsqueezy/wedges?style=plastic)](https://www.npmjs.com/package/@lemonsqueezy/wedges)
+[![](https://img.shields.io/npm/v/wedges-vue?style=plastic)](https://www.npmjs.com/package/wedges-vue)
+[![](https://img.shields.io/npm/dw/wedges-vue?style=plastic)](https://www.npmjs.com/package/wedges-vue)
 
 Wedges is an ever-expanding, open-source React UI library built with the Wedges Design System, Radix primitives, and Tailwind CSS.
 
 With Wedges, you get a range of pre-built, customizable components that are easy to use and integrate into your React projects. It also comes with full TypeScript support, ensuring type safety and developer-friendly experience.
 
-<a href="https://lemonsqueezy.com/wedges/docs"><strong>Get Started with Wedges &rarr;</strong></a>
+<a href="https://wedges-vue.pages.dev/"><strong>Get Started with Wedges Vue &rarr;</strong></a>
 
 ## License
 
@@ -21,7 +21,7 @@ Wedges is licensed under the [MIT License](./LICENSE).
 
 ## Getting Started
 
-Visit <a href="https://www.lemonsqueezy.com/wedges/docs" target="_blank">Wedges Docs</a> to get started.
+Visit <a href="https://wedges-vue.pages.dev/" target="_blank">Wedges Vue Docs</a> to get started.
 
 ## Repository Structure
 
@@ -33,7 +33,7 @@ This repository is organized as a monorepo and is managed with <a href="https://
 
 ## Apps
 
-- [apps/www](./apps/docs) - Contains the Vitepress documentation site for the Wedges UI library. This is where we maintain the documentation, examples, and guides for using the library.
+- [apps/docs](./apps/docs) - Contains the Vitepress documentation site for the Wedges UI library. This is where we maintain the documentation, examples, and guides for using the library.
 
 ## Development
 
@@ -58,4 +58,4 @@ Please refer to the [CONTRIBUTING](./CONTRIBUTING.md) for more information.
 
 ## Connect with us
 
-Follow us <a href="https://twitter.com/lmsqueezy/" target="_blank" rel="noreferrer">@lmsqueezy</a> for the latest and coolest. Let us know what you're building with Wedges!
+Follow us <a href="https://twitter.com/raymondmuller/" target="_blank" rel="noreferrer">@raymondmuller</a> and <a href="https://twitter.com/lmsqueezy/" target="_blank" rel="noreferrer">@lmsqueezy</a> for the latest and coolest. Let us know what you're building with Wedges!
