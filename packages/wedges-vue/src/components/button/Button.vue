@@ -51,8 +51,6 @@ const isNonDestructiveIconOnly
 
 <template>
   <Primitive
-    :as
-    :as-child
     :class="
       cn(
         buttonVariants({ size, variant, shape, destructive }),
@@ -63,7 +61,7 @@ const isNonDestructiveIconOnly
         props.class,
       )
     "
-    :disabled
+    v-bind="props"
   >
     <Slot
       :class="[
