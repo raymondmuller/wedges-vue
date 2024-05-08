@@ -14,7 +14,7 @@ const open = ref(false);
     <SheetTrigger as-child>
       <Button
         variant="ghost"
-        class="flex-shrink-0 px-2 mr-2 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+        class="text-white/70 flex-shrink-0 px-2 mr-2 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
       >
         <svg
           strokeWidth="1.5"

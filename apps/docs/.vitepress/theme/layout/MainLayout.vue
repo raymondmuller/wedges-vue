@@ -87,7 +87,7 @@ watch(() => $route.path, (_) => {
 
         <div>
           <nav
-            class="flex items-center space-x-6 text-sm font-medium max-lg:space-x-4"
+            class="hidden md:flex items-center space-x-6 text-sm font-medium max-lg:space-x-4"
           >
             <a
               v-for="route in docsConfig.mainNav"
@@ -126,7 +126,7 @@ watch(() => $route.path, (_) => {
               v-for="link in links"
               :key="link.name"
               as="a"
-              class="w-9 h-9"
+              class="w-9 h-9 text-white/70"
               :href="link.href" target="_blank"
               variant="link"
               size="xs-icon"
