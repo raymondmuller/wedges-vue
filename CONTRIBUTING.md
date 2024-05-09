@@ -9,7 +9,7 @@ Our repository is managed with [PNPM](https://pnpm.io/). Make sure you have PNPM
 1. **packages/wedges-vue**:
    This is the heart of our project – the UI library itself. Here you'll find all the components and utilities Wedges UI library.
 
-2. **apps/www**:
+2. **apps/docs**:
    Contains the Vitepress documentation site for the Wedges UI library. This is where we maintain the documentation, examples, and guides for using the library.
 
 ## Tooling and Technologies

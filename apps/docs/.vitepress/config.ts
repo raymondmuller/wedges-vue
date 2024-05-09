@@ -47,7 +47,7 @@ export default defineConfig({
       provider: "local",
     },
     editLink: {
-      pattern: "https://github.com/raymondmuller/wedges-vue/tree/main/apps/www/src/:path",
+      pattern: "https://github.com/raymondmuller/wedges-vue/tree/main/apps/docs/src/:path",
       text: "Edit this page on GitHub",
     },
   },
