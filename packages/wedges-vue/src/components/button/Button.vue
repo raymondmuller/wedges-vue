@@ -10,7 +10,6 @@ defineOptions({
 });
 
 const props = withDefaults(defineProps<ButtonProps>(), {
-  as: "button",
   variant: "primary",
   size: "md",
   shape: "rounded",
@@ -62,6 +61,7 @@ const isNonDestructiveIconOnly
       )
     "
     v-bind="props"
+    :as="props.as || 'button'"
   >
     <Slot
       :class="[

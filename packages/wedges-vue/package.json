@@ -12,6 +12,8 @@
   },
   "main": "./dist/wedges-vue.umd.cjs",
   "module": "./dist/wedges-vue.js",
+  "types": "./dist/main.d.ts",
+  "typings": "./dist/main.d.ts",
   "files": [
     "dist"
   ],
