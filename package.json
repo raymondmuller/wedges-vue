@@ -1,9 +1,9 @@
 {
   "name": "wedges-vue-project",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
-  "packageManager": "pnpm@8.15.5",
+  "packageManager": "pnpm@9.1.2",
   "license": "MIT",
   "repository": "raymondmuller/wedges-vue",
   "workspaces": [
