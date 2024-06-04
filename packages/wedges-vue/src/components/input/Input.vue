@@ -34,6 +34,7 @@ const ariaInvalid = props.ariaInvalid ?? props.destructive;
     <div class="relative flex items-center">
       <input
         v-model="modelValue"
+        :id="elId"
         :aria-describedby="helperText ? `${elId}__describer` : undefined"
         :aria-invalid
         :aria-labelledby="label ? `${elId}__label` : undefined"
