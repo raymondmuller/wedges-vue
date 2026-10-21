@@ -196,10 +196,11 @@ function parseMeta(meta: ComponentMeta) {
 }
 
 function getEventFromComponentPath(dir: string) {
-  const files = readdirSync(resolve(__dirname, "../../../packages/wedges-vue/src/components", dir), { withFileTypes: true }).filter(file => file.name.includes(".vue"));
+  const componentDir = resolve(__dirname, "../../../packages/wedges-vue/src/components", dir);
+  const files = readdirSync(componentDir, { withFileTypes: true }).filter(file => file.name.includes(".vue"));
 
   files.forEach((file) => {
-    const source = readFileSync(join(file.parentPath, file.name), { encoding: "utf8" });
+    const source = readFileSync(join(componentDir, file.name), { encoding: "utf8" });
     const { descriptor } = sfcParse(source, {
       filename: file.name,
     });
