@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { Label as LabelPrimitive, type LabelProps } from "radix-vue";
+import type { LabelProps } from "radix-vue";
 import type { HTMLAttributes } from "vue";
+import { Label as LabelPrimitive } from "radix-vue";
 import { computed, useSlots } from "vue";
-import { Tooltip } from "../tooltip";
 import { cn, hasSlotContent } from "@/lib/utils";
+import { Tooltip } from "../tooltip";
 
 defineOptions({
-  name: "Label"
+  name: "Label",
 });
 
 const props = defineProps<

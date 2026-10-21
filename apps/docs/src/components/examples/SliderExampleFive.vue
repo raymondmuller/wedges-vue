@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Slider } from "wedges-vue";
 import { EmojiHappyIcon, EmojiSadIcon, MoonIcon, StarIcon, SunIcon } from "@iconicicons/vue3";
+import { Slider } from "wedges-vue";
 </script>
 
 <template>

@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import type { TooltipArrowProps } from "radix-vue";
 import {
   TooltipArrow as PrimitiveArrow,
-  type TooltipArrowProps,
+
 } from "radix-vue";
 import { TippyIcon } from "../icons";
 
 defineOptions({
-  name: "TooltipArrow"
+  name: "TooltipArrow",
 });
 
 const props = withDefaults(defineProps<TooltipArrowProps>(), {

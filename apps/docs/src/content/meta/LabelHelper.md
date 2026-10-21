@@ -3,13 +3,13 @@
 <PropsTable :data="[
   {
     'name': 'disabled',
-    'description': '',
+    'description': '<p>Whether the helper text is disabled.</p>\n',
     'type': 'boolean',
     'required': false
   },
   {
     'name': 'error',
-    'description': '',
+    'description': '<p>Whether the helper text is in an error state.</p>\n',
     'type': 'boolean',
     'required': false
   }

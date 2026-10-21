@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { Slot } from "radix-vue";
-import { type HTMLAttributes, computed, inject, useSlots } from "vue";
-import Button from "../button/Button.vue";
+import type { HTMLAttributes } from "vue";
 import type { ButtonGroupProviderProps } from "./types";
+import { Slot } from "radix-vue";
+import { computed, inject, useSlots } from "vue";
 import { cn, hasSlotContent } from "@/lib/utils";
+import Button from "../button/Button.vue";
 
 defineOptions({
-  name: "ButtonGroupItem"
+  name: "ButtonGroupItem",
 });
 
 const props = withDefaults(
@@ -38,7 +39,6 @@ const isIcon = computed(() => {
     (hasBeforeSlot && !hasAfterSlot && !hasDefaultSlot && size)
     ?? (hasAfterSlot && !hasBeforeSlot && !hasDefaultSlot && size)
     ?? props.isIconOnly === true
-    ?? false
   );
 });
 </script>

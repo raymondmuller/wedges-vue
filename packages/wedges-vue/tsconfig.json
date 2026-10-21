@@ -5,6 +5,7 @@
       "@/*": ["./src/*"]
     },
     "declaration": true,
+    "emitDeclarationOnly": true,
     "noEmit": false,
     "outDir": "dist"
 

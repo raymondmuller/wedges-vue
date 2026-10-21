@@ -9,7 +9,7 @@
   },
   {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
     'default': '\'div\''
@@ -65,8 +65,9 @@
   {
     'name': 'modelValue',
     'description': '',
-    'type': 'any',
-    'required': false
+    'type': 'string',
+    'required': false,
+    'default': '\'\''
   },
   {
     'name': 'required',

@@ -284,56 +284,56 @@ Wedges introduces a set of simple fade animation utilities. These animations are
 Keyframes for these animations are defined as follows:
 
 ```js showLineNumbers
- keyframes: {
-    fadeInUp: {
-        "0%": {
-            opacity: "0",
-            transform: "translateY(5px) scale(.97)",
-        },
-        "100%": {
-            opacity: "1",
-            transform: "translateY(0px) scale(1)",
-        },
+const keyframes = {
+  fadeInUp: {
+    "0%": {
+      opacity: "0",
+      transform: "translateY(5px) scale(.97)",
     },
-    fadeInDown: {
-        "0%": {
-            opacity: "0",
-            transform: "translateY(-5px) scale(.97)",
-        },
-        "100%": {
-            opacity: "1",
-            transform: "translateY(0px) scale(1)",
-        },
+    "100%": {
+      opacity: "1",
+      transform: "translateY(0px) scale(1)",
     },
-    fadeInLeft: {
-        "0%": {
-            opacity: "0",
-            transform: "translateX(5px) scale(.97)",
-        },
-        "100%": {
-            opacity: "1",
-            transform: "translateX(0px) scale(1)",
-        },
+  },
+  fadeInDown: {
+    "0%": {
+      opacity: "0",
+      transform: "translateY(-5px) scale(.97)",
     },
-    fadeInRight: {
-        "0%": {
-            opacity: "0",
-            transform: "translateX(-5px) scale(.97)",
-        },
-        "100%": {
-            opacity: "1",
-            transform: "translateX(0px) scale(1)",
-        },
+    "100%": {
+      opacity: "1",
+      transform: "translateY(0px) scale(1)",
     },
-    fadeOut: {
-        "0%": {
-            opacity: "1",
-            transform: "scale(1)",
-        },
-        "100%": {
-            opacity: "0",
-            transform: "scale(.97)",
-        },
+  },
+  fadeInLeft: {
+    "0%": {
+      opacity: "0",
+      transform: "translateX(5px) scale(.97)",
     },
-},
+    "100%": {
+      opacity: "1",
+      transform: "translateX(0px) scale(1)",
+    },
+  },
+  fadeInRight: {
+    "0%": {
+      opacity: "0",
+      transform: "translateX(-5px) scale(.97)",
+    },
+    "100%": {
+      opacity: "1",
+      transform: "translateX(0px) scale(1)",
+    },
+  },
+  fadeOut: {
+    "0%": {
+      opacity: "1",
+      transform: "scale(1)",
+    },
+    "100%": {
+      opacity: "0",
+      transform: "scale(.97)",
+    },
+  },
+};
 ```

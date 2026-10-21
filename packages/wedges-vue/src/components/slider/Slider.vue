@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { SliderRootEmits, SliderRootProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import {
   SliderRange,
   SliderRoot,
@@ -7,15 +8,14 @@ import {
   useForwardPropsEmits,
   useId,
 } from "radix-vue";
-import type { HTMLAttributes } from "vue";
 import { computed, ref } from "vue";
+import { cn, hasSlotContent } from "@/lib/utils";
 import Label from "../label/Label.vue";
 import LabelHelper from "../label/LabelHelper.vue";
 import SliderThumb from "./SliderThumb.vue";
-import { cn, hasSlotContent } from "@/lib/utils";
 
 defineOptions({
-  name: "Slider"
+  name: "Slider",
 });
 
 const props = defineProps<

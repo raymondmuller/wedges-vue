@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { buttonVariants } from "wedges-vue";
 import { cn } from "wedges-vue/utils";
+import GitHubIcon from "~icons/radix-icons/github-logo";
 import Announcement from "../components/Announcement.vue";
 import PageAction from "../components/PageAction.vue";
 import PageHeader from "../components/PageHeader.vue";
 import PageHeaderDescription from "../components/PageHeaderDescription.vue";
 import PageHeaderHeading from "../components/PageHeaderHeading.vue";
-import GitHubIcon from "~icons/radix-icons/github-logo";
 </script>
 
 <template>

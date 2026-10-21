@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
+import type { DropdownMenuCheckboxItemEmits, DropdownMenuCheckboxItemProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import {
   DropdownMenuCheckboxItem,
-  type DropdownMenuCheckboxItemEmits,
-  type DropdownMenuCheckboxItemProps,
+
   DropdownMenuItemIndicator,
   useForwardPropsEmits,
 } from "radix-vue";
-import { CheckIcon } from "../icons";
+import { computed } from "vue";
 import { cn } from "@/lib/utils";
+import { CheckIcon } from "../icons";
 
 defineOptions({
-  name: "DropdownMenuCheckboxItem"
+  name: "DropdownMenuCheckboxItem",
 });
 
 const props = defineProps<

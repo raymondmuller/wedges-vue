@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Toggle } from "wedges-vue";
 import { CropIcon } from "@iconicicons/vue3";
+import { Toggle } from "wedges-vue";
 </script>
 
 <template>

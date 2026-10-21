@@ -1,9 +1,9 @@
-import type { HTMLAttributes } from "vue";
-import type { ProgressRoot } from "radix-vue";
 import type { VariantProps } from "class-variance-authority";
+import type { ProgressRoot } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import type { LabelHelperProps } from "../types";
-import type { progressBarVariants } from "./variants";
 import type { sizeMapping } from "./sizes";
+import type { progressBarVariants } from "./variants";
 
 export type ProgressBarVariants = VariantProps<typeof progressBarVariants>;
 

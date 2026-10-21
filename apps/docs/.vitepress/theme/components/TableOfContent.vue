@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import type { TableOfContents, TableOfContentsItem } from "../types/docs";
 import { onContentUpdated } from "vitepress";
 import { shallowRef } from "vue";
 import { buttonVariants } from "wedges-vue";
-import type { TableOfContents, TableOfContentsItem } from "../types/docs";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
-import { ScrollArea } from "./ui/scroll-area";
-
 import TableOfContentTree from "./TableOfContentTree.vue";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
+
+import { ScrollArea } from "./ui/scroll-area";
 
 const headers = shallowRef<TableOfContents>();
 
@@ -24,7 +24,7 @@ function getHeadingsWithHierarchy(divId: string) {
   headings.forEach((heading: HTMLHeadingElement) => {
     const level = Number.parseInt(heading.tagName.charAt(1));
     if (!heading.id) {
-      const newId = heading.textContent?.replaceAll(/[^a-zA-Z0-9 ]/g, "").replaceAll(" ", "-").toLowerCase();
+      const newId = heading.textContent?.replaceAll(/[^a-z0-9 ]/gi, "").replaceAll(" ", "-").toLowerCase();
       heading.id = `${newId}`;
     }
 

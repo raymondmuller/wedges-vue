@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { BookIcon, FileIcon, FolderIcon, TrashIcon } from "@iconicicons/vue3";
 import { Avatar, Tag } from "wedges-vue";
+import DotIcon from "./TagDotIcon.vue";
 import UKFlagIcon from "./TagUKFlagIcon.vue";
 import USFlagIcon from "./TagUSFlagIcon.vue";
-import DotIcon from "./TagDotIcon.vue";
 </script>
 
 <template>

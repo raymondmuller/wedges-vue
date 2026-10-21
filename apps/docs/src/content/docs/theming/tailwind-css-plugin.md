@@ -16,8 +16,8 @@ If you haven't installed Tailwind CSS already, follow the instructions in the <a
 Once Tailwind CSS is installed, update your `tailwind.config` file to add the necessary configuration for Wedges:
 
 ```tsx {2,7,10,11} title="tailwind.config.ts" showLineNumbers
-import { wedgesTW } from "wedges-vue";
 import type { Config } from "tailwindcss";
+import { wedgesTW } from "wedges-vue";
 
 const config: Config = {
   content: [
@@ -39,8 +39,8 @@ export default config;
 The `wedgesTW` plugin accepts a configuration object allowing you to customize the plugin's behavior. This is the default structure of the configuration object:
 
 ```tsx {12-24} title="tailwind.config.ts" showLineNumbers
-import { wedgesTW } from "wedges-vue";
 import type { Config } from "tailwindcss";
+import { wedgesTW } from "wedges-vue";
 
 const config: Config = {
   content: [

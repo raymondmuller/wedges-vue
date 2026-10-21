@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import type { ToggleGroupRootEmits } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import type { ToggleGroupContextProps, ToggleGroupProps } from "./types";
 import {
   ToggleGroupRoot,
-  type ToggleGroupRootEmits,
+
   useForwardPropsEmits,
 } from "radix-vue";
-import { type HTMLAttributes, computed, provide } from "vue";
-import type { ToggleGroupContextProps, ToggleGroupProps } from "./types";
+import { computed, provide } from "vue";
 import { cn } from "@/lib/utils";
 
 defineOptions({
@@ -17,7 +19,7 @@ const props = withDefaults(
     ToggleGroupProps & {
       class?: HTMLAttributes["class"];
     }
->(),
+  >(),
   {
     size: "md",
     disabled: false,

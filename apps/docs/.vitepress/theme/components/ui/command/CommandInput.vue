@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
+import type { ComboboxInputProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import { SearchIcon } from "@iconicicons/vue3";
-import { ComboboxInput, type ComboboxInputProps, useForwardProps } from "radix-vue";
+import { ComboboxInput, useForwardProps } from "radix-vue";
+import { computed } from "vue";
 import { cn } from "wedges-vue/utils";
 
 defineOptions({

@@ -1,14 +1,14 @@
 <script setup lang="ts">
+import type { AvatarProps } from "../avatar";
+import type { TagProps } from "./types";
 import { CloseIcon } from "@iconicicons/vue3";
 import { Slot } from "radix-vue";
 import { h, ref, useSlots } from "vue";
-import type { AvatarProps } from "../avatar";
 import Badge from "../badge/Badge.vue";
 import Button from "../button/Button.vue";
-import type { TagProps } from "./types";
 
 defineOptions({
-  name: "Tag"
+  name: "Tag",
 });
 
 const props = withDefaults(defineProps<TagProps>(), {

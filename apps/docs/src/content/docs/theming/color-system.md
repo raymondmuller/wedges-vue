@@ -294,8 +294,8 @@ For optimal results, we suggest creating a ten-step graded color scale for your 
 Themable colors can be customized by adding options to the `wedgesTW` plugin in your `tailwind.config.ts` file. For instance, to use yellow as the primary color for **dark theme only**, you can set it like this:"
 
 ```tsx {} title="tailwind.config.ts" showLineNumbers
-import { wedgesTW } from "wedges-vue";
 import type { Config } from "tailwindcss";
+import { wedgesTW } from "wedges-vue";
 
 const config: Config = {
   // Other Tailwind CSS options...
@@ -335,8 +335,8 @@ export default config;
 If you want to use one of the Wedges Color Palette colors, `wedgesPalette` can be imported from `wedges-vue`, for example:
 
 ```tsx {11} title="tailwind.config.ts" showLineNumbers /wedgesPalette/
-import { wedgesPalette, wedgesTW } from "wedges-vue";
 import type { Config } from "tailwindcss";
+import { wedgesPalette, wedgesTW } from "wedges-vue";
 
 const config: Config = {
   // Other Tailwind CSS options...

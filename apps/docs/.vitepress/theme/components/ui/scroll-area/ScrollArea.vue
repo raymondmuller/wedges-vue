@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
+import type { ScrollAreaRootProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import {
   ScrollAreaCorner,
   ScrollAreaRoot,
-  type ScrollAreaRootProps,
+
   ScrollAreaViewport,
 } from "radix-vue";
+import { computed } from "vue";
 import { cn } from "wedges-vue/utils";
 import ScrollBar from "./ScrollBar.vue";
 

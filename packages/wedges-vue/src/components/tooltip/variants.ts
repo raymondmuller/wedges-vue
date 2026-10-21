@@ -1,4 +1,5 @@
-import { type VariantProps, cva } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 
 export const tooltipVariant = cva(
   "z-50 rounded-md text-start text-white wg-antialiased",

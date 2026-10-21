@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { type HTMLAttributes, ref } from "vue";
+import type { HTMLAttributes } from "vue";
+import type { ClosableProps, NotClosableProps } from "./types";
+import type { AlertVariants } from "./variants";
 import { Slot } from "radix-vue";
+import { ref } from "vue";
+import { cn } from "@/lib/utils";
 import { InfoIcon } from "../icons";
+import AlertCloseButton from "./AlertCloseButton.vue";
+import AlertDescription from "./AlertDescription.vue";
+import AlertRoot from "./AlertRoot.vue";
+import AlertTitle from "./AlertTitle.vue";
 import {
-  type AlertVariants,
   alertIconVariants,
+
   alertVariants,
 } from "./variants";
-import AlertRoot from "./AlertRoot.vue";
-import AlertCloseButton from "./AlertCloseButton.vue";
-import AlertTitle from "./AlertTitle.vue";
-import AlertDescription from "./AlertDescription.vue";
-import type { ClosableProps, NotClosableProps } from "./types";
-import { cn } from "@/lib/utils";
 
 defineOptions({
   name: "Alert",

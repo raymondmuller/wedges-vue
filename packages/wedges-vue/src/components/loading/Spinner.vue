@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { computed } from "vue";
 import type { LoadingVariants } from "./variants";
+import { computed } from "vue";
 import { calcDimension, calcStroke } from "./utils";
 
 defineOptions({
-  name: "LoadingSpinner"
+  name: "LoadingSpinner",
 });
 
 const props = defineProps<{ size?: LoadingVariants["size"] }>();

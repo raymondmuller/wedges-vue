@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import type { ProgressBarProps } from "./types";
 
 import {
   ProgressIndicator,
   ProgressRoot as ProgressPrimitiveRoot,
   useId,
 } from "radix-vue";
+import { computed } from "vue";
+import { cn } from "@/lib/utils";
 import Label from "../label/Label.vue";
 import LabelHelper from "../label/LabelHelper.vue";
 import ProgressBarWrapper from "./ProgressBarWrapper.vue";
-import type { ProgressBarProps } from "./types";
 import { progressBarVariants } from "./variants";
-import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "ProgressBar"
+  name: "ProgressBar",
 });
 
 const props = withDefaults(defineProps<ProgressBarProps>(), {

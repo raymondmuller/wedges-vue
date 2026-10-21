@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { AvatarRoot } from "radix-vue";
 import type { HTMLAttributes } from "vue";
-import { rootClasses } from "./variants";
+import { AvatarRoot } from "radix-vue";
 import { cn } from "@/lib/utils";
+import { rootClasses } from "./variants";
 
 defineOptions({
-  name: "AvatarRoot"
+  name: "AvatarRoot",
 });
 
 const props = defineProps<{

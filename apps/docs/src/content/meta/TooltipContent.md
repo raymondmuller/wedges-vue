@@ -44,9 +44,9 @@
   },
   {
     'name': 'content',
-    'description': '<p>The content to display inside the tooltip</p>\n',
+    'description': '<p>The content to display inside the tooltip.\nOmit this when rendering content through the default slot.</p>\n',
     'type': 'any',
-    'required': true
+    'required': false
   },
   {
     'name': 'sideOffset',

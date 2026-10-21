@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { type KbdKey, kbdKeysLabelMap, kbdKeysMap } from "./types";
+import type { KbdKey } from "./types";
+import { kbdKeysLabelMap, kbdKeysMap } from "./types";
 
 defineOptions({
-  name: "Key"
+  name: "Key",
 });
 
 defineProps<{

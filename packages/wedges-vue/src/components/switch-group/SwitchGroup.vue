@@ -1,13 +1,13 @@
 <script setup lang="ts">
+import type { SwitchGroupContextProps, SwitchGroupProps } from "./types";
 import { useId } from "radix-vue";
 import { computed, provide } from "vue";
+import { hasSlotContent } from "@/lib/utils";
 import Label from "../label/Label.vue";
 import LabelHelper from "../label/LabelHelper.vue";
-import type { SwitchGroupContextProps, SwitchGroupProps } from "./types";
-import { hasSlotContent } from "@/lib/utils";
 
 defineOptions({
-  name: "SwitchGroup"
+  name: "SwitchGroup",
 });
 
 const props = defineProps<SwitchGroupProps>();

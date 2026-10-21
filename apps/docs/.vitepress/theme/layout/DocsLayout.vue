@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import { ChevronRightIcon, CodeIcon, LinkIcon } from "@iconicicons/vue3";
 import { useData, useRoute } from "vitepress";
 import { Badge } from "wedges-vue";
-import { ChevronRightIcon, CodeIcon, LinkIcon } from "@iconicicons/vue3";
+import EditLink from "../components/EditLink.vue";
+import TableOfContentVue from "../components/TableOfContent.vue";
 import { ScrollArea } from "../components/ui/scroll-area";
 import { docsConfig } from "../config/docs";
-import TableOfContentVue from "../components/TableOfContent.vue";
-import EditLink from "../components/EditLink.vue";
 
 const $route = useRoute();
 const { frontmatter } = useData();

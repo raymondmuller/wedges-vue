@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { type HTMLAttributes, type Ref, onMounted, ref } from "vue";
+import type { HTMLAttributes, Ref } from "vue";
 import { Slot } from "radix-vue";
+import { onMounted, ref } from "vue";
 import { cn, refHasTextNode } from "@/lib/utils";
 
 defineOptions({

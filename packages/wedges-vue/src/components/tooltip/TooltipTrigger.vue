@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import type { TooltipTriggerProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import {
   TooltipTrigger as PrimitiveTrigger,
-  type TooltipTriggerProps,
+
 } from "radix-vue";
-import { type HTMLAttributes, getCurrentInstance } from "vue";
-import { InfoIcon } from "../icons";
+import { getCurrentInstance } from "vue";
 import { cn } from "@/lib/utils";
+import { InfoIcon } from "../icons";
 
 defineOptions({
-  name: "TooltipTrigger"
+  name: "TooltipTrigger",
 });
 
 const props = defineProps<

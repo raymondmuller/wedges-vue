@@ -11,10 +11,11 @@
     "moduleResolution": "bundler",
     "paths": {
       "@/*": [
-        "docs/src/*"
+        "./src/*"
       ]
     },
     "types": [
+      "vite/client",
       "unplugin-icons/types/vue",
       "node"
     ],

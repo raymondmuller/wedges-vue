@@ -18,6 +18,13 @@ export default antfu(
     },
   },
   {
+    files: ["pnpm-workspace.yaml"],
+    rules: {
+      // These settings belong to pnpm 10+. This repo is on pnpm 9.
+      "pnpm/yaml-enforce-settings": "off",
+    },
+  },
+  {
     // Without `files`, they are general rules for all files
     rules: {
       "symbol-description": 0,

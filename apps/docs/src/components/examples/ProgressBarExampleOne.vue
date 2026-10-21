@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ProgressBar } from "wedges-vue";
 import { SpinnerIcon } from "@iconicicons/vue3";
+import { ProgressBar } from "wedges-vue";
 </script>
 
 <template>

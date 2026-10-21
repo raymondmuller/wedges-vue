@@ -1,21 +1,23 @@
 <script setup lang="ts">
+import type { TabsTriggerProps } from "radix-vue";
+import type { HTMLAttributes, Ref } from "vue";
+import type { TabsContextProps } from "./types";
 import {
   Slot,
   TabsTrigger,
-  type TabsTriggerProps,
+
   useForwardProps,
 } from "radix-vue";
 import {
-  type HTMLAttributes,
-  type Ref,
   computed,
+
   inject,
   onMounted,
+
   ref,
 } from "vue";
-import type { TabsContextProps } from "./types";
-import { tabVariants } from "./variants";
 import { cn, refHasTextNode } from "@/lib/utils";
+import { tabVariants } from "./variants";
 
 defineOptions({
   name: "TabsTrigger",

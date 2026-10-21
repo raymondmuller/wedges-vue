@@ -9,7 +9,7 @@
   },
   {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
     'default': '\'div\''
@@ -23,25 +23,25 @@
   {
     'name': 'defaultValue',
     'description': '<p>The value of the tab that should be active when initially rendered. Use when you do not need to control the state of the tabs</p>\n',
-    'type': 'string | number',
+    'type': 'StringOrNumber',
     'required': false
   },
   {
     'name': 'dir',
-    'description': '<p>The reading direction of the combobox when applicable. &lt;br&gt; If omitted, inherits globally from <code>DirectionProvider</code> or assumes LTR (left-to-right) reading mode.</p>\n',
-    'type': '\'ltr\' | \'rtl\'',
+    'description': '<p>The reading direction of the combobox when applicable. &lt;br&gt; If omitted, inherits globally from <code>ConfigProvider</code> or assumes LTR (left-to-right) reading mode.</p>\n',
+    'type': 'Direction',
     'required': false
   },
   {
     'name': 'modelValue',
     'description': '<p>The controlled value of the tab to activate. Can be bind as <code>v-model</code>.</p>\n',
-    'type': 'string | number',
+    'type': 'StringOrNumber',
     'required': false
   },
   {
     'name': 'orientation',
-    'description': '<p>The orientation the tabs are layed out.\nMainly so arrow navigation is done accordingly (left &amp; right vs. up &amp; down)</p>\n',
-    'type': '\'horizontal\' | \'vertical\'',
+    'description': '<p>The orientation the tabs are laid out.\nMainly so arrow navigation is done accordingly (left &amp; right vs. up &amp; down)</p>\n',
+    'type': 'DataOrientation',
     'required': false,
     'default': '\'horizontal\''
   },

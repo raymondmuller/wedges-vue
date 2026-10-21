@@ -11,7 +11,7 @@
   {
     'name': 'orientation',
     'description': '<p>Orientation of the group.</p>\n',
-    'type': '\'horizontal\' | \'vertical\'',
+    'type': 'DataOrientation',
     'required': false,
     'default': '\'horizontal\''
   },

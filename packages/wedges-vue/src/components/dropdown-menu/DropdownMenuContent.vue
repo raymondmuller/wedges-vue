@@ -1,20 +1,27 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
+import type { DropdownMenuContentEmits, DropdownMenuContentProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import {
   DropdownMenuContent,
-  type DropdownMenuContentEmits,
-  type DropdownMenuContentProps,
+
   DropdownMenuPortal,
   useForwardPropsEmits,
 } from "radix-vue";
+import { computed } from "vue";
 import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "DropdownMenuContent"
+  name: "DropdownMenuContent",
 });
 
 const props = withDefaults(
-  defineProps<DropdownMenuContentProps & { class?: HTMLAttributes["class"] }>(),
+  defineProps<DropdownMenuContentProps & {
+    class?: HTMLAttributes["class"];
+    /**
+     * Offset the start padding when the menu contains checkbox or radio items.
+     */
+    inset?: boolean;
+  }>(),
   {
     sideOffset: 8,
     align: "start",

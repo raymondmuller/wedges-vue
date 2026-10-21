@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
+import type { DropdownMenuRadioItemEmits, DropdownMenuRadioItemProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import {
   DropdownMenuItemIndicator,
   DropdownMenuRadioItem,
-  type DropdownMenuRadioItemEmits,
-  type DropdownMenuRadioItemProps,
+
   useForwardPropsEmits,
 } from "radix-vue";
-import { CircleIcon } from "../icons";
+import { computed } from "vue";
 import { cn } from "@/lib/utils";
+import { CircleIcon } from "../icons";
 
 defineOptions({
-  name: "DropdownMenuRadioItem"
+  name: "DropdownMenuRadioItem",
 });
 
 const props = defineProps<

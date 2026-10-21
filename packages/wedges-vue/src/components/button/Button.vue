@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import type { ButtonProps, Size } from "./types";
 import { Primitive, Slot } from "radix-vue";
 import { computed, useSlots } from "vue";
-import type { ButtonProps, Size } from "./types";
-import { buttonVariants, iconVariants } from "./variants";
 import { cn, hasSlotContent } from "@/lib/utils";
+import { buttonVariants, iconVariants } from "./variants";
 
 defineOptions({
   name: "Button",
@@ -44,8 +44,8 @@ const isIcon = computed(() => {
 
 const isNonDestructiveIconOnly
   = isVariantLinkOutlineTertiaryTransparent.value
-  && isIcon.value
-  && !props.destructive;
+    && isIcon.value
+    && !props.destructive;
 </script>
 
 <template>

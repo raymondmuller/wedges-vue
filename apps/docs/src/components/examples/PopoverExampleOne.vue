@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { ChevronDownIcon, CopyIcon, DownloadIcon } from "@iconicicons/vue3";
 import { ref } from "vue";
 import { ButtonGroup, ButtonGroupItem, CheckboxGroup, CheckboxGroupItem, Popover, PopoverContent, PopoverPortal, PopoverTrigger } from "wedges-vue";
-import { ChevronDownIcon, CopyIcon, DownloadIcon } from "@iconicicons/vue3";
 
 const container = ref<HTMLElement | null>(null);
 </script>

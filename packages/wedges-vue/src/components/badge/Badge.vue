@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Slot } from "radix-vue";
 import type { BadgeProps } from "./types";
-import { badgeVariants, iconVariants } from "./variants";
+import { Slot } from "radix-vue";
 import { cn, hasSlotContent } from "@/lib/utils";
+import { badgeVariants, iconVariants } from "./variants";
 
 defineOptions({
   name: "Badge",

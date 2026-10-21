@@ -3,7 +3,7 @@
 <PropsTable :data="[
   {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
     'default': '\'div\''
@@ -23,7 +23,7 @@
   {
     'name': 'value',
     'description': '<p>A unique value that associates the content with a trigger.</p>\n',
-    'type': 'string | number',
+    'type': 'StringOrNumber',
     'required': true
   }
 ]" />

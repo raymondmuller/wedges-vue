@@ -3,8 +3,8 @@ import type { HTMLAttributes } from "vue";
 import type { LabelHelperProps } from "../types";
 
 export type InputElement = HTMLInputElement;
-export type InputProps = LabelProps &
-  LabelHelperProps & {
+export type InputProps = LabelProps
+  & LabelHelperProps & {
     ariaInvalid?: boolean;
     class?: HTMLAttributes["class"];
     id?: HTMLAttributes["id"];

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { TabsList, type TabsListProps } from "radix-vue";
-import { type HTMLAttributes, computed, inject } from "vue";
+import type { TabsListProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import type { TabsContextProps } from "./types";
-import { tabListVariants } from "./variants";
+import { TabsList } from "radix-vue";
+import { computed, inject } from "vue";
 import { cn } from "@/lib/utils";
+import { tabListVariants } from "./variants";
 
 defineOptions({
   name: "TabsList",

@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { AvatarImage, type AvatarImageProps } from "radix-vue";
+import type { AvatarImageProps } from "radix-vue";
 import type { HTMLAttributes } from "vue";
+import { AvatarImage } from "radix-vue";
 import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "AvatarImage"
+  name: "AvatarImage",
 });
 
 const props = defineProps<

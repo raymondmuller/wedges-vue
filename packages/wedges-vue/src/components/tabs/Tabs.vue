@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import type { TabsRootEmits, TabsRootProps } from "radix-vue";
-import { TabsRoot, useForwardPropsEmits } from "radix-vue";
-import { type HTMLAttributes, provide } from "vue";
-
+import type { HTMLAttributes } from "vue";
 import type { TabsContextProps, Variants } from "./types";
+
+import { TabsRoot, useForwardPropsEmits } from "radix-vue";
+import { provide } from "vue";
 import { cn } from "@/lib/utils";
 
 defineOptions({

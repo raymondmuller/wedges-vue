@@ -6,7 +6,7 @@ import {
 } from "radix-vue";
 
 defineOptions({
-  name: "TooltipRoot"
+  name: "TooltipRoot",
 });
 
 const props = withDefaults(defineProps<TooltipRootProps>(), {

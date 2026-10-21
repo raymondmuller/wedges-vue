@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useId } from "radix-vue";
-import LabelHelper from "../label/LabelHelper.vue";
-import { Label } from "../label";
 import type { InputProps } from "./types";
+import { useId } from "radix-vue";
 import { cn } from "@/lib/utils";
+import { Label } from "../label";
+import LabelHelper from "../label/LabelHelper.vue";
 
 defineOptions({
-  name: "Input"
+  name: "Input",
 });
 
 const props = defineProps<InputProps>();
@@ -33,8 +33,8 @@ const ariaInvalid = props.ariaInvalid ?? props.destructive;
 
     <div class="relative flex items-center">
       <input
-        v-model="modelValue"
         :id="elId"
+        v-model="modelValue"
         :aria-describedby="helperText ? `${elId}__describer` : undefined"
         :aria-invalid
         :aria-labelledby="label ? `${elId}__label` : undefined"

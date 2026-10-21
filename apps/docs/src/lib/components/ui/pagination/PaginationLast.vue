@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
-import { PaginationLast, type PaginationLastProps } from "radix-vue";
+import type { PaginationLastProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import { ChevronRightIcon } from "@iconicicons/vue3";
+import { PaginationLast } from "radix-vue";
+import { computed } from "vue";
 import { cn } from "wedges-vue/utils";
 import {
   Button,

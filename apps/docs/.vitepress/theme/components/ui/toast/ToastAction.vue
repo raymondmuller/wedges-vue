@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
-import { ToastAction, type ToastActionProps } from "radix-vue";
+import type { ToastActionProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import { ToastAction } from "radix-vue";
+import { computed } from "vue";
 import { cn } from "wedges-vue/utils";
 
 const props = defineProps<ToastActionProps & { class?: HTMLAttributes["class"] }>();

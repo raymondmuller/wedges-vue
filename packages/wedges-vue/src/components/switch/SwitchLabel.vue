@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import type { SwitchProps } from "./types";
 import { Fragment } from "vue";
+import { cn } from "@/lib/utils";
 import Label from "../label/Label.vue";
 import LabelHelper from "../label/LabelHelper.vue";
-import type { SwitchProps } from "./types";
-import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "SwitchLabel"
+  name: "SwitchLabel",
 });
 
 const props = defineProps<

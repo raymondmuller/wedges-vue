@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
-import Key from "./Key.vue";
 import type { KbdKey } from "./types";
-import { type KbdVariants, kbdVariants } from "./variants";
+import type { KbdVariants } from "./variants";
 import { cn } from "@/lib/utils";
+import Key from "./Key.vue";
+import { kbdVariants } from "./variants";
 
 defineOptions({
-  name: "Kbd"
+  name: "Kbd",
 });
 
 const props = withDefaults(

@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
+import type { DialogContentEmits, DialogContentProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import { CloseIcon } from "@iconicicons/vue3";
 import {
   DialogClose,
   DialogContent,
-  type DialogContentEmits,
-  type DialogContentProps,
+
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
 } from "radix-vue";
-import { CloseIcon } from "@iconicicons/vue3";
+import { computed } from "vue";
 import { cn } from "wedges-vue/utils";
 
 const props = defineProps<DialogContentProps & { class?: HTMLAttributes["class"] }>();

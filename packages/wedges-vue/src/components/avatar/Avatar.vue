@@ -1,30 +1,31 @@
 <script setup lang="ts">
-import { AvatarFallback as Fallback } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 
-import { UserIcon } from "@iconicicons/vue3";
-import { type HTMLAttributes, computed, useSlots } from "vue";
-import LemonSqueezyIcon from "../icons/LemonSqueezyIcon.vue";
-import AvatarFallback from "./AvatarFallback.vue";
-import AvatarImage from "./AvatarImage.vue";
-import AvatarNotification from "./AvatarNotification.vue";
-import AvatarRoot from "./AvatarRoot.vue";
-import AvatarStatus from "./AvatarStatus.vue";
 import type { AvatarProps } from "./types";
-import {
-  avatarVariants,
-  fallbackVariants,
-  notificationVariants,
-  statusVariants,
-} from "./variants";
+import { UserIcon } from "@iconicicons/vue3";
+import { AvatarFallback as Fallback } from "radix-vue";
+import { computed, useSlots } from "vue";
 import {
   cn,
   getElementFromHash,
   hasSlotContent,
   stringToHash,
 } from "@/lib/utils";
+import LemonSqueezyIcon from "../icons/LemonSqueezyIcon.vue";
+import AvatarFallback from "./AvatarFallback.vue";
+import AvatarImage from "./AvatarImage.vue";
+import AvatarNotification from "./AvatarNotification.vue";
+import AvatarRoot from "./AvatarRoot.vue";
+import AvatarStatus from "./AvatarStatus.vue";
+import {
+  avatarVariants,
+  fallbackVariants,
+  notificationVariants,
+  statusVariants,
+} from "./variants";
 
 defineOptions({
-  name: "Avatar"
+  name: "Avatar",
 });
 
 const props = withDefaults(
@@ -48,10 +49,10 @@ const bgColor = computed(() => {
 
   const identifier
     = (props.initials ?? "")
-    + (props.size ?? "")
-    + (props.status ?? "")
-    + (props.notification ?? "")
-    + (props.src ?? "");
+      + (props.size ?? "")
+      + (props.status ?? "")
+      + (props.notification ?? "")
+      + (props.src ?? "");
   const color = getElementFromHash(stringToHash(identifier), randomColors);
 
   return color ?? !randomColors[0];

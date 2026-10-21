@@ -1,8 +1,8 @@
 import path from "node:path";
-import { defineConfig, postcssIsolateStyles } from "vitepress";
-import Icons from "unplugin-icons/vite";
-import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
+import tailwind from "tailwindcss";
+import Icons from "unplugin-icons/vite";
+import { defineConfig, postcssIsolateStyles } from "vitepress";
 import { cssVariables } from "./theme/config/shiki";
 
 // import { transformerMetaWordHighlight, transformerNotationWordHighlight } from '@shikijs/transformers'

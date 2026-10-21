@@ -15,6 +15,12 @@
     'required': false
   },
   {
+    'name': 'onClose',
+    'description': '<p>An optional callback function to be called when the close icon is clicked.\nThis can be used to handle the removal of the tag.\nIf provided, the close icon will be displayed.</p>\n',
+    'type': '((event: MouseEvent) => void)',
+    'required': false
+  },
+  {
     'name': 'shape',
     'description': '<p>The shape of the badge.</p>\n',
     'type': '\'rounded\' | \'pill\' | null',

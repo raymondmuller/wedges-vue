@@ -1,22 +1,23 @@
 <script setup lang="ts">
 import type { LabelProps } from "radix-vue";
-import { type HTMLAttributes, computed, inject } from "vue";
+import type { HTMLAttributes } from "vue";
 import type { SwitchProps } from "../switch/types";
 import type { LabelHelperProps } from "../types";
-import Switch from "../switch/Switch.vue";
 import type { SwitchGroupContextProps } from "./types";
+import { computed, inject } from "vue";
 import { cn } from "@/lib/utils";
+import Switch from "../switch/Switch.vue";
 
 type SwitchGroupItemProps = Omit<SwitchProps, "alignLabel">;
 
 defineOptions({
-  name: "SwitchGroupItem"
+  name: "SwitchGroupItem",
 });
 
 const props = defineProps<
-  SwitchGroupItemProps &
-  LabelProps &
-  LabelHelperProps & {
+  SwitchGroupItemProps
+  & LabelProps
+  & LabelHelperProps & {
     /**
      * Alignment of the labels: "start" (usually left) or "end" (usually right).
      * @default "end"
@@ -31,22 +32,34 @@ const checked = defineModel("checked", {
   default: false,
 });
 
-const delegatedProps = computed(() => {
-  const { class: _, disabled: __, checked: ____, ...delegated } = props;
-  return delegated;
-});
-
 const context = inject("SwitchGroupContext") as SwitchGroupContextProps;
 
 const isDisabled = computed(() => context?.disabled || props.disabled);
+
+const switchProps = computed(() => {
+  const { class: itemClass, disabled: _disabled, checked: _checked, ...delegated } = props;
+  const shared = {
+    ...delegated,
+    disabled: isDisabled.value,
+    class: cn("wg-switch-group__item", itemClass),
+  };
+
+  if (typeof shared.label === "string") {
+    return {
+      ...shared,
+      label: shared.label,
+      alignLabel: context?.alignLabels,
+    };
+  }
+
+  const { label: _label, ...withoutLabel } = shared;
+  return withoutLabel;
+});
 </script>
 
 <template>
   <Switch
     v-model:checked="checked"
-    :align-label="context?.alignLabels"
-    :disabled="isDisabled"
-    :class="cn('wg-switch-group__item', props.class)"
-    v-bind="delegatedProps"
+    v-bind="switchProps"
   />
 </template>

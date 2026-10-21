@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ToggleGroup, ToggleGroupItem } from "wedges-vue";
 import { ColumnsHorizontalIcon, GridIcon, GridMasonryIcon, RowsIcon, TableColumnsIcon, TableRowsIcon } from "@iconicicons/vue3";
+import { ToggleGroup, ToggleGroupItem } from "wedges-vue";
 </script>
 
 <template>

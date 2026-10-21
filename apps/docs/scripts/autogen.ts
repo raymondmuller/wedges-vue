@@ -1,12 +1,12 @@
+import type { ComponentMeta, MetaCheckerOptions, PropertyMeta, PropertyMetaSchema } from "vue-component-meta";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, parse, resolve } from "node:path";
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import _traverse from "@babel/traverse";
 import fg from "fast-glob";
 import MarkdownIt from "markdown-it";
-import type { ComponentMeta, MetaCheckerOptions, PropertyMeta, PropertyMetaSchema } from "vue-component-meta";
-import { createComponentMetaChecker } from "vue-component-meta";
+import { createChecker } from "vue-component-meta";
 import { babelParse, parse as sfcParse } from "vue/compiler-sfc";
-import _traverse from "@babel/traverse";
 import { transformJSDocLinks } from "./utils";
 
 // @ts-expect-error ignore
@@ -33,7 +33,7 @@ const checkerOptions: MetaCheckerOptions = {
   printer: { newLine: 1 },
 };
 
-const tsconfigChecker = createComponentMetaChecker(
+const tsconfigChecker = createChecker(
   resolve(__dirname, "../../../packages/wedges-vue/tsconfig.json"),
   checkerOptions,
 );
@@ -78,16 +78,16 @@ primitiveComponents.forEach((componentPath) => {
 
   let parsedString = "<!-- This file was automatic generated. Do not edit it manually -->\n\n";
   if (meta.props.length)
-    parsedString += `<PropsTable :data="${JSON.stringify(meta.props, null, 2).replace(/"/g, "'")}" />\n`;
+    parsedString += `<PropsTable :data="${toSingleQuotedJson(meta.props)}" />\n`;
 
   if (meta.events.length)
-    parsedString += `\n<EmitsTable :data="${JSON.stringify(meta.events, null, 2).replace(/"/g, "'")}" />\n`;
+    parsedString += `\n<EmitsTable :data="${toSingleQuotedJson(meta.events)}" />\n`;
 
   if (meta.slots.length)
-    parsedString += `\n<SlotsTable :data="${JSON.stringify(meta.slots, null, 2).replace(/"/g, "'")}" />\n`;
+    parsedString += `\n<SlotsTable :data="${toSingleQuotedJson(meta.slots)}" />\n`;
 
   if (meta.methods.length)
-    parsedString += `\n<MethodsTable :data="${JSON.stringify(meta.methods, null, 2).replace(/"/g, "'")}" />\n`;
+    parsedString += `\n<MethodsTable :data="${toSingleQuotedJson(meta.methods)}" />\n`;
 
   writeFileSync(metaMdFilePath, parsedString);
 });
@@ -113,6 +113,13 @@ function parseTypeFromSchema(schema: PropertyMetaSchema): string {
   else {
     return "";
   }
+}
+
+// Props tables are embedded as JS object literals delimited by single quotes.
+function toSingleQuotedJson(value: unknown) {
+  return JSON.stringify(value, null, 2)
+    .replace(/'/g, "\\'")
+    .replace(/"/g, "'");
 }
 
 // Utilities
@@ -192,10 +199,9 @@ function getEventFromComponentPath(dir: string) {
   const files = readdirSync(resolve(__dirname, "../../../packages/wedges-vue/src/components", dir), { withFileTypes: true }).filter(file => file.name.includes(".vue"));
 
   files.forEach((file) => {
-    const { name, path } = file;
-    const source = readFileSync(join(path, name), { encoding: "utf8" });
+    const source = readFileSync(join(file.parentPath, file.name), { encoding: "utf8" });
     const { descriptor } = sfcParse(source, {
-      filename: name,
+      filename: file.name,
     });
 
     const code = descriptor.script?.content;
@@ -260,7 +266,7 @@ function generateDependencies(componentPath: string) {
     traverse(result, {
       ImportDeclaration: (path) => {
         const value = path.node.source.value.split("/").at(-1);
-        if (value && value.match(/^[A-Z]/) && !value.includes("vue")) {
+        if (value && /^[A-Z]/.test(value) && !value.includes("vue")) {
           const prev = depTree.get(dir) ?? [];
           depTree.set(dir, [...new Set([...prev, value])]);
         }

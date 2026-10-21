@@ -1,14 +1,15 @@
 <script setup lang="ts">
+import type { TooltipContentEmits, TooltipContentProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import type { TooltipVariant } from "./variants";
 import {
   TooltipContent as TooltipPrimitiveContent,
   useForwardPropsEmits,
 } from "radix-vue";
 import { computed } from "vue";
-import type { HTMLAttributes } from "vue";
-import type { TooltipContentEmits, TooltipContentProps } from "radix-vue";
-import TooltipArrow from "./TooltipArrow.vue";
-import { type TooltipVariant, tooltipVariant } from "./variants";
 import { cn } from "@/lib/utils";
+import TooltipArrow from "./TooltipArrow.vue";
+import { tooltipVariant } from "./variants";
 
 defineOptions({
   name: "TooltipContent",
@@ -28,9 +29,10 @@ const props = withDefaults(
     arrow?: boolean;
 
     /**
-     * The content to display inside the tooltip
+     * The content to display inside the tooltip.
+     * Omit this when rendering content through the default slot.
      */
-    content: any;
+    content?: any;
 
     /**
      * The size of the tooltip

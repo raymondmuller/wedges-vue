@@ -25,5 +25,5 @@ export * from "./components/toggle-group";
 export * from "./components/tooltip";
 
 /* export tailwind plugin and themable color scale type from the React package */
-export { wedgesTW, wedgesPalette } from "@lemonsqueezy/wedges";
+export { wedgesPalette, wedgesTW } from "@lemonsqueezy/wedges";
 export type { ColorScale, ThemableColorScale } from "@lemonsqueezy/wedges";

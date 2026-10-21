@@ -46,8 +46,8 @@ const orange500 = wedgesPalette.orange[500];
 To create a new theme, you need to provide a configuration object to the `wedgesTW` plugin in your `tailwind.config` file.
 
 ```tsx {26-38} title="tailwind.config.ts" showLineNumbers
-import { wedgesTW } from "wedges-vue";
 import type { Config } from "tailwindcss";
+import { wedgesTW } from "wedges-vue";
 
 const primaryBlue: ThemableColorScale = {
   100: "#DAF0FF",

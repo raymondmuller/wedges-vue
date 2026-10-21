@@ -1,13 +1,13 @@
 <script setup lang="ts">
+import type { DropdownMenuRootEmits, DropdownMenuRootProps } from "radix-vue";
 import {
   DropdownMenuRoot,
-  type DropdownMenuRootEmits,
-  type DropdownMenuRootProps,
+
   useForwardPropsEmits,
 } from "radix-vue";
 
 defineOptions({
-  name: "DropdownMenu"
+  name: "DropdownMenu",
 });
 
 const props = defineProps<DropdownMenuRootProps>();

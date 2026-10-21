@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from "vue";
-import type { DataOrientation } from "../types";
 import type { ButtonProps } from "../button/types";
+import type { DataOrientation } from "../types";
 
 export interface ButtonGroupProps {
   /**

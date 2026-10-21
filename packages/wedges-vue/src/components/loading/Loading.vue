@@ -1,15 +1,15 @@
 <script setup lang="ts">
+import type { LoadingProps } from "./types";
 import { computed } from "vue";
-import Dots from "./Dots.vue";
 
+import { cn } from "@/lib/utils";
+import Dots from "./Dots.vue";
 import Line from "./Line.vue";
 import Spinner from "./Spinner.vue";
 import { loadingVariants } from "./variants";
-import type { LoadingProps } from "./types";
-import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "Loading"
+  name: "Loading",
 });
 
 const props = withDefaults(defineProps<LoadingProps>(), {

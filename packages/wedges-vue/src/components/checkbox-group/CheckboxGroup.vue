@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { CheckboxRootEmits } from "radix-vue";
-import { useId } from "radix-vue";
 import type { HTMLAttributes } from "vue";
+import type { CheckboxGroupContextProps, CheckboxGroupProps } from "./types";
+import { useId } from "radix-vue";
 import { provide, useAttrs } from "vue";
+import { cn } from "@/lib/utils";
 import Label from "../label/Label.vue";
 import LabelHelper from "../label/LabelHelper.vue";
-import type { CheckboxGroupContextProps, CheckboxGroupProps } from "./types";
-import { cn } from "@/lib/utils";
 
 defineOptions({
   name: "CheckboxGroup",

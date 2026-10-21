@@ -1,4 +1,5 @@
-import { type VNode, cloneVNode, defineComponent } from "vue";
+import type { VNode } from "vue";
+import { cloneVNode, defineComponent } from "vue";
 import { useConfigStore } from "@/stores/config";
 
 export default defineComponent(
@@ -8,8 +9,8 @@ export default defineComponent(
     return () => {
       const clonedVNode = slots.default?.()?.[0]
         ? cloneVNode(slots.default?.()?.[0], {
-          key: JSON.stringify(codeConfig.value),
-        })
+            key: JSON.stringify(codeConfig.value),
+          })
         : undefined;
 
       // @ts-expect-error  cloneVNode

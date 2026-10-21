@@ -1,22 +1,23 @@
 <script setup lang="ts">
+import type { NavItem } from "../config/docs";
 import { useMagicKeys } from "@vueuse/core";
 import { Content, useRoute, useRouter } from "vitepress";
 import { ref, watch } from "vue";
 import { Button } from "wedges-vue";
-import Logo from "../components/Logo.vue";
-import MobileNav from "../components/MobileNav.vue";
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "../components/ui/command";
-import { Dialog, DialogContent } from "../components/ui/dialog";
-import { Toaster as DefaultToaster, Toaster as NewYorkSonner, Toaster as NewYorkToaster } from "../components/ui/toast";
-import { type NavItem, docsConfig } from "../config/docs";
-
-import Kbd from "../components/Kbd.vue";
-
-import SimpleIconsGithubLogo from "~icons/simple-icons/github";
-import SimpleIconsTwitterLogo from "~icons/simple-icons/x";
-
 import Circle from "~icons/radix-icons/circle";
 import File from "~icons/radix-icons/file";
+import SimpleIconsGithubLogo from "~icons/simple-icons/github";
+import SimpleIconsTwitterLogo from "~icons/simple-icons/x";
+import Kbd from "../components/Kbd.vue";
+
+import Logo from "../components/Logo.vue";
+
+import MobileNav from "../components/MobileNav.vue";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "../components/ui/command";
+
+import { Dialog, DialogContent } from "../components/ui/dialog";
+import { Toaster as DefaultToaster, Toaster as NewYorkSonner, Toaster as NewYorkToaster } from "../components/ui/toast";
+import { docsConfig } from "../config/docs";
 
 defineOptions({
   inheritAttrs: false,
@@ -63,9 +64,7 @@ function handleSelectLink(item: NavItem) {
 }
 
 watch(() => $route.path, (_) => {
-  // @ts-expect-error View Transition API not supported by all the browser yet
   if (document.startViewTransition) {
-    // @ts-expect-error View Transition API not supported by all the browser yet
     document.startViewTransition(() => {
     });
   }

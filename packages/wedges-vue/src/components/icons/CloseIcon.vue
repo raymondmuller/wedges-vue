@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useId } from "radix-vue";
 import type { IconProps } from "./types";
+import { useId } from "radix-vue";
 
 const props = defineProps<IconProps>();
 

@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import type { SliderThumbProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import type { DataOrientation } from "../types";
 import { SliderThumb, useForwardProps } from "radix-vue";
-import { type HTMLAttributes, computed, ref } from "vue";
+import { computed, ref } from "vue";
+import { cn } from "@/lib/utils";
+import TooltipContent from "../tooltip/TooltipContent.vue";
 import TooltipProvider from "../tooltip/TooltipProvider.vue";
 import TooltipRoot from "../tooltip/TooltipRoot.vue";
 import TooltipTrigger from "../tooltip/TooltipTrigger.vue";
-import TooltipContent from "../tooltip/TooltipContent.vue";
-import type { DataOrientation } from "../types";
-import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "SliderThumb"
+  name: "SliderThumb",
 });
 
 const props = withDefaults(
@@ -52,8 +53,8 @@ const shouldShowTooltip = computed(
   () =>
     (props.showTooltip === "always" && !!props.tooltip)
     || (props.showTooltip === "hover"
-    && (isPointerDown.value || isHovering.value)
-    && !!props.tooltip),
+      && (isPointerDown.value || isHovering.value)
+      && !!props.tooltip),
 );
 
 function onPointerDown(event: PointerEvent) {

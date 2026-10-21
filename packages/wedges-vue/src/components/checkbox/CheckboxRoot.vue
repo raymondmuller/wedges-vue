@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import type { HTMLAttributes } from "vue";
 import { Slot } from "radix-vue";
-import { type HTMLAttributes, useSlots } from "vue";
+import { useSlots } from "vue";
 import { cn, hasSlotContent } from "@/lib/utils";
 
 defineOptions({
-  name: "CheckboxRoot"
+  name: "CheckboxRoot",
 });
 
 const props = defineProps<{

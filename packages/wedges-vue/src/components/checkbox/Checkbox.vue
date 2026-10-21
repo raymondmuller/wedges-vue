@@ -1,23 +1,23 @@
 <script setup lang="ts">
 import type { CheckboxRootEmits, CheckboxRootProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import {
   CheckboxIndicator,
   CheckboxRoot as CheckboxPrimitive,
   useForwardPropsEmits,
   useId,
 } from "radix-vue";
-import type { HTMLAttributes } from "vue";
 import { computed, inject, useAttrs } from "vue";
+import { cn } from "@/lib/utils";
 import { LabelHelper } from "../label";
 import Label from "../label/Label.vue";
 import CheckboxIndeterminate from "./CheckboxIndeterminate.vue";
 import CheckboxRoot from "./CheckboxRoot.vue";
 import CheckedBoxIcon from "./CheckedBoxIcon.vue";
 import EmptyCheckboxIcon from "./EmptyCheckboxIcon.vue";
-import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "Checkbox"
+  name: "Checkbox",
 });
 
 const props = defineProps<

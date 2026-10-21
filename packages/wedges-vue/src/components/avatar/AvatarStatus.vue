@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { statusClasses } from "./variants";
 import { cn } from "@/lib/utils";
+import { statusClasses } from "./variants";
 
 defineOptions({
-  name: "AvatarStatus"
+  name: "AvatarStatus",
 });
 
 const props = withDefaults(

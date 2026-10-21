@@ -4,12 +4,12 @@
   {
     'name': 'items',
     'description': '<p>The items to display in the group.</p>\n',
-    'type': 'AvatarGroupAvatarProps',
+    'type': 'AvatarGroupAvatarProps[]',
     'required': true
   },
   {
     'name': 'moreLabel',
-    'description': '',
+    'description': '<p>The label to display at the end of the group.</p>\n',
     'type': 'string',
     'required': false
   },

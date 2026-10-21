@@ -8,7 +8,7 @@ export function transformJSDocLinks(md: MarkdownIt) {
         for (let i = 0; i < token.children.length; i++) {
           const child = token.children[i];
           if (child.type === "text" && child.content.startsWith("{@link")) {
-            const matches = child.content.match(/\{@link\s+(.*?)\}/);
+            const matches = child.content.match(/\{@link\s([^}]*)\}/);
             if (matches) {
               const linkText = matches[1];
               const linkNode = new state.Token("link_open", "a", 1);

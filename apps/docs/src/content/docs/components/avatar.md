@@ -24,7 +24,7 @@ import { Avatar } from "wedges-vue";
 
 ## API Reference
 
-#### Avatar
+### Avatar
 
 Represents an avatar image. Extends the <a href="https://www.radix-vue.com/components/avatar#image" rel="nofollow noreferrer" target="_blank">Radix Avatar Image</a> primitive and includes all of its props.
 

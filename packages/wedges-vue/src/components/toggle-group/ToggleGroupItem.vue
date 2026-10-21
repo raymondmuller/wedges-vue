@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import type { ToggleGroupItemProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import type { ToggleGroupContextProps } from "./types";
 import {
   ToggleGroupItem,
-  type ToggleGroupItemProps,
+
   useForwardProps,
 } from "radix-vue";
-import { type HTMLAttributes, computed, inject } from "vue";
-import Toggle from "../toggle/Toggle.vue";
-import type { ToggleGroupContextProps } from "./types";
+import { computed, inject } from "vue";
 import { cn } from "@/lib/utils";
+import Toggle from "../toggle/Toggle.vue";
 
 defineOptions({
   name: "ToggleGroupItem",

@@ -1,13 +1,13 @@
 <script setup lang="ts">
+import type { AvatarGroupProps } from "./types";
+import { cn, hasSlotContent } from "@/lib/utils";
 import AvatarGroupItem from "./AvatarGroupItem.vue";
 import AvatarGroupLabel from "./AvatarGroupLabel.vue";
 import AvatarGroupRoot from "./AvatarGroupRoot.vue";
-import type { AvatarGroupProps } from "./types";
 import { avatarGroupVariants } from "./variants";
-import { cn, hasSlotContent } from "@/lib/utils";
 
 defineOptions({
-  name: "AvatarGroup"
+  name: "AvatarGroup",
 });
 
 const props = defineProps<AvatarGroupProps>();

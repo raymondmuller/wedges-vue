@@ -9,7 +9,7 @@
   },
   {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
     'default': '\'div\''
@@ -21,17 +21,54 @@
     'required': false
   },
   {
+    'name': 'onBlur',
+    'description': '',
+    'type': '((event: FocusEvent) => void)',
+    'required': false
+  },
+  {
+    'name': 'onFocus',
+    'description': '',
+    'type': '((event: FocusEvent) => void)',
+    'required': false
+  },
+  {
+    'name': 'onPointerDown',
+    'description': '',
+    'type': '((event: PointerEvent) => void)',
+    'required': false
+  },
+  {
+    'name': 'onPointerEnter',
+    'description': '',
+    'type': '((event: PointerEvent) => void)',
+    'required': false
+  },
+  {
+    'name': 'onPointerLeave',
+    'description': '',
+    'type': '((event: PointerEvent) => void)',
+    'required': false
+  },
+  {
+    'name': 'onPointerUp',
+    'description': '',
+    'type': '((event: PointerEvent) => void)',
+    'required': false
+  },
+  {
     'name': 'orientation',
     'description': '',
-    'type': '\'horizontal\' | \'vertical\'',
+    'type': 'DataOrientation',
     'required': false,
     'default': '\'horizontal\''
   },
   {
-    'name': 'shouldShowTooltip',
+    'name': 'showTooltip',
     'description': '',
-    'type': 'boolean',
-    'required': false
+    'type': '\'always\' | \'hover\' | \'never\'',
+    'required': false,
+    'default': '\'hover\''
   },
   {
     'name': 'tooltip',

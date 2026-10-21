@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { inject } from "vue";
-import { Checkbox, type CheckboxElementProps } from "../checkbox";
+import type { CheckboxElementProps } from "../checkbox";
 import type { CheckboxGroupContextProps } from "./types";
+import { inject } from "vue";
+import { Checkbox } from "../checkbox";
 
 type CheckboxGroupItemProps = CheckboxElementProps;
 

@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import type { HTMLAttributes } from "vue";
 import { Slot } from "radix-vue";
-import { type HTMLAttributes, useAttrs } from "vue";
+import { useAttrs } from "vue";
 import { cn, hasSlotContent } from "@/lib/utils";
 
 defineOptions({
-  name: "LabelHelper"
+  name: "LabelHelper",
 });
 
 const props = defineProps<{

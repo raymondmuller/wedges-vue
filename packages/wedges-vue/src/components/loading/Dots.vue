@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { computed } from "vue";
 import type { LoadingVariants } from "./variants";
+import { computed } from "vue";
 import { calcDimension } from "./utils";
 
 defineOptions({
-  name: "LoadingDots"
+  name: "LoadingDots",
 });
 
 const props = defineProps<{

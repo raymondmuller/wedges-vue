@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Button, CheckboxGroup, CheckboxGroupItem, Popover, PopoverContent, PopoverTrigger } from "wedges-vue";
 import { ChevronDownIcon } from "@iconicicons/vue3";
+import { Button, CheckboxGroup, CheckboxGroupItem, Popover, PopoverContent, PopoverTrigger } from "wedges-vue";
 </script>
 
 <template>

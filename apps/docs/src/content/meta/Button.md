@@ -3,10 +3,10 @@
 <PropsTable :data="[
   {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
-    'default': '\'button\''
+    'default': '\'div\''
   },
   {
     'name': 'asChild',
@@ -22,35 +22,41 @@
   },
   {
     'name': 'disabled',
-    'description': '',
+    'description': '<p>Specifies whether the button is disabled.</p>\n',
     'type': 'boolean',
     'required': false
   },
   {
+    'name': 'href',
+    'description': '<p>Specifies whether the button is loading.</p>\n',
+    'type': 'string',
+    'required': false
+  },
+  {
     'name': 'isIconOnly',
-    'description': '',
+    'description': '<p>Specifies if the button only contains an icon</p>\n',
     'type': 'boolean',
     'required': false
   },
   {
     'name': 'shape',
-    'description': '',
+    'description': '<p>The shape of the button.</p>\n',
     'type': '\'rounded\' | \'pill\' | null',
     'required': false,
     'default': '\'rounded\''
   },
   {
     'name': 'size',
-    'description': '',
+    'description': '<p>The size of the button.</p>\n',
     'type': '\'sm\' | \'md\' | \'xs-icon\' | null',
     'required': false,
     'default': '\'md\''
   },
   {
     'name': 'variant',
-    'description': '',
-    'type': '\'primary\' | \'link\' | \'secondary\' | \'tertiary\' | \'outline\' | \'transparent\' | null',
-    'required': false,
+    'description': '<p>The variant of the button.</p>\n',
+    'type': '\'primary\' | \'secondary\' | \'tertiary\' | \'outline\' | \'transparent\' | \'link\' | null',
+    'required': true,
     'default': '\'primary\''
   }
 ]" />

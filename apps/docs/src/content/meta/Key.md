@@ -4,7 +4,7 @@
   {
     'name': 'keyName',
     'description': '',
-    'type': 'null | \'shift\' | \'delete\' | \'right\' | \'left\' | \'end\' | \'command\' | \'ctrl\' | \'option\' | \'enter\' | \'escape\' | \'tab\' | \'capslock\' | \'up\' | \'down\' | \'pageup\' | \'pagedown\' | \'home\' | \'help\' | \'space\'',
+    'type': 'KbdKey | null',
     'required': true
   }
 ]" />

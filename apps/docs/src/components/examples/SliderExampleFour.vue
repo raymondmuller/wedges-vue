@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Slider } from "wedges-vue";
 import { MinusIcon, PlusIcon } from "@iconicicons/vue3";
 import { computed, ref } from "vue";
+import { Slider } from "wedges-vue";
 
 const value = ref<number[]>([16]);
 

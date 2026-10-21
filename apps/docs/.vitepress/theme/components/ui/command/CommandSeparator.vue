@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
 import type { ComboboxSeparatorProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import { ComboboxSeparator } from "radix-vue";
+import { computed } from "vue";
 import { cn } from "wedges-vue/utils";
 
 const props = defineProps<ComboboxSeparatorProps & { class?: HTMLAttributes["class"] }>();

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Avatar } from "../avatar";
 import type { AvatarMoreLabelProps } from "./types";
 import { cn } from "@/lib/utils";
+import { Avatar } from "../avatar";
 
 defineOptions({
-  name: "AvatarGroupLabel"
+  name: "AvatarGroupLabel",
 });
 
 const props = defineProps<AvatarMoreLabelProps>();

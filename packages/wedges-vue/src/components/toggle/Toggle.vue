@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import type { ToggleEmits } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import type { ToggleProps } from "./types";
 import {
   Toggle,
-  type ToggleEmits,
+
   useForwardPropsEmits,
 } from "radix-vue";
-import { type HTMLAttributes, computed } from "vue";
-import { Button } from "../button";
-import type { ToggleProps } from "./types";
+import { computed } from "vue";
 import { cn } from "@/lib/utils";
+import { Button } from "../button";
 
 defineOptions({
   name: "Toggle",

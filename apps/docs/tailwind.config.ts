@@ -1,5 +1,6 @@
+import type { ThemableColorScale } from "wedges-vue";
 import tailwindTypography from "@tailwindcss/typography";
-import { type ThemableColorScale, wedgesTW } from "wedges-vue";
+import { wedgesTW } from "wedges-vue";
 
 const primaryBlue: ThemableColorScale = {
   100: "#DAF0FF",

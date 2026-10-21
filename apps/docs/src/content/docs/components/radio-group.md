@@ -11,8 +11,8 @@ primitive: https://www.radix-vue.com/components/radio-group.html
 
 ```vue
 <script setup lang="ts">
-import { Label } from "wedges-vue";
 import { RadioGroup, RadioGroupItem } from "wedges-group";
+import { Label } from "wedges-vue";
 </script>
 
 <template>

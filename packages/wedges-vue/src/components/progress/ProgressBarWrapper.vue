@@ -2,7 +2,7 @@
 import type { ProgressBarVariants } from "./types";
 
 defineOptions({
-  name: "ProgressBarWrapper"
+  name: "ProgressBarWrapper",
 });
 
 defineProps<{

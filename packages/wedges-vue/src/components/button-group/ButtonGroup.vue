@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { provide } from "vue";
 import type { ButtonGroupProps, ButtonGroupProviderProps } from "./types";
+import { provide } from "vue";
 import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "ButtonGroup"
+  name: "ButtonGroup",
 });
 
 const props = withDefaults(defineProps<ButtonGroupProps>(), {

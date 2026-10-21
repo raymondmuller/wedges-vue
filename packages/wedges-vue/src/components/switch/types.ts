@@ -23,7 +23,7 @@ export interface HasNoLabel {
   alignLabel?: never;
 }
 
-export type SwitchProps = SwitchRootProps &
-  LabelProps &
-  Omit<LabelHelperProps, "label"> &
-  (HasLabel | HasNoLabel);
+export type SwitchProps = SwitchRootProps
+  & LabelProps
+  & Omit<LabelHelperProps, "label">
+  & (HasLabel | HasNoLabel);

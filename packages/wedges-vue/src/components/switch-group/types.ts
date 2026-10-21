@@ -1,9 +1,9 @@
-import type { HTMLAttributes } from "vue";
 import type { LabelProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 import type { LabelHelperProps } from "../types";
 
-export type SwitchGroupProps = LabelProps &
-  LabelHelperProps & {
+export type SwitchGroupProps = LabelProps
+  & LabelHelperProps & {
     /**
      * Alignment of the labels: "start" (usually left) or "end" (usually right).
      * @default "end"

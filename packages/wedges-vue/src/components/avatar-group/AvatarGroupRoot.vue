@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
-import { defaultAvatarGroupClasses } from "./variants";
 import { cn } from "@/lib/utils";
+import { defaultAvatarGroupClasses } from "./variants";
 
 defineOptions({
-  name: "AvatarGroupRoot"
+  name: "AvatarGroupRoot",
 });
 
 const props = defineProps<{

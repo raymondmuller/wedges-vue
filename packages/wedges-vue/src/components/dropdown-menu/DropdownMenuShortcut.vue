@@ -3,7 +3,7 @@ import type { HTMLAttributes } from "vue";
 import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "DropdownMenuShortcut"
+  name: "DropdownMenuShortcut",
 });
 
 const props = defineProps<{

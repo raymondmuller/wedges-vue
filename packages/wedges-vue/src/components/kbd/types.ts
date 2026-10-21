@@ -1,23 +1,23 @@
-export type KbdKey =
-  | "command"
-  | "shift"
-  | "ctrl"
-  | "option"
-  | "enter"
-  | "delete"
-  | "escape"
-  | "tab"
-  | "capslock"
-  | "up"
-  | "right"
-  | "down"
-  | "left"
-  | "pageup"
-  | "pagedown"
-  | "home"
-  | "end"
-  | "help"
-  | "space";
+export type KbdKey
+  = | "command"
+    | "shift"
+    | "ctrl"
+    | "option"
+    | "enter"
+    | "delete"
+    | "escape"
+    | "tab"
+    | "capslock"
+    | "up"
+    | "right"
+    | "down"
+    | "left"
+    | "pageup"
+    | "pagedown"
+    | "home"
+    | "end"
+    | "help"
+    | "space";
 
 export const kbdKeysMap: Record<KbdKey, string> = {
   command: "⌘",

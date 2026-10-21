@@ -1,14 +1,14 @@
-import { computed, ref } from "vue";
 import type { Component, VNode } from "vue";
 import type { ToastProps } from ".";
+import { computed, ref } from "vue";
 
 const TOAST_LIMIT = 1;
 const TOAST_REMOVE_DELAY = 1000000;
 
-export type StringOrVNode =
-  | string
-  | VNode
-  | (() => VNode);
+export type StringOrVNode
+  = | string
+    | VNode
+    | (() => VNode);
 
 type ToasterToast = ToastProps & {
   id: string;
@@ -33,8 +33,8 @@ function genId() {
 
 type ActionType = typeof actionTypes;
 
-type Action =
-  | {
+type Action
+  = | {
     type: ActionType["ADD_TOAST"];
     toast: ToasterToast;
   }
@@ -78,15 +78,21 @@ const state = ref<State>({
 
 function dispatch(action: Action) {
   switch (action.type) {
-    case actionTypes.ADD_TOAST:
-      state.value.toasts = [action.toast, ...state.value.toasts].slice(0, TOAST_LIMIT);
+    case actionTypes.ADD_TOAST: {
+      const toasts = state.value.toasts.slice(0, TOAST_LIMIT - 1);
+      (toasts as unknown[]).unshift(action.toast);
+      state.value.toasts = toasts;
       break;
+    }
 
-    case actionTypes.UPDATE_TOAST:
-      state.value.toasts = state.value.toasts.map(t =>
-        t.id === action.toast.id ? { ...t, ...action.toast } : t,
-      );
+    case actionTypes.UPDATE_TOAST: {
+      const next = action.toast;
+      for (const toastItem of state.value.toasts) {
+        if (toastItem.id === next.id)
+          Object.assign(toastItem as object, next as object);
+      }
       break;
+    }
 
     case actionTypes.DISMISS_TOAST: {
       const { toastId } = action;
@@ -100,22 +106,27 @@ function dispatch(action: Action) {
         });
       }
 
-      state.value.toasts = state.value.toasts.map(t =>
-        t.id === toastId || toastId === undefined
-          ? {
-              ...t,
-              open: false,
-            }
-          : t,
-      );
+      for (const toastItem of state.value.toasts) {
+        if (toastItem.id === toastId || toastId === undefined)
+          toastItem.open = false;
+      }
+      state.value.toasts = state.value.toasts.slice();
       break;
     }
 
     case actionTypes.REMOVE_TOAST:
-      if (action.toastId === undefined)
+      if (action.toastId === undefined) {
         state.value.toasts = [];
-      else
-        state.value.toasts = state.value.toasts.filter(t => t.id !== action.toastId);
+      }
+      else {
+        const toastId = action.toastId;
+        const remaining = [];
+        for (const toastItem of state.value.toasts) {
+          if (toastItem.id !== toastId)
+            remaining.push(toastItem);
+        }
+        state.value.toasts = remaining;
+      }
 
       break;
   }

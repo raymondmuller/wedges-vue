@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
+import type { HTMLAttributes } from "vue";
+import type { ProgressCircleProps } from "./types";
+import { computed } from "vue";
+import { cn } from "@/lib/utils";
 import { sizeMapping } from "./sizes";
 import { progressCircleVariants } from "./variants";
-import type { ProgressCircleProps } from "./types";
-import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "ProgressCircle"
+  name: "ProgressCircle",
 });
 
 const props = withDefaults(

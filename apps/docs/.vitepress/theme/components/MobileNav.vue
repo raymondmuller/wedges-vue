@@ -2,9 +2,9 @@
 import { ref } from "vue";
 import { Button } from "wedges-vue";
 import { docsConfig } from "../config/docs";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import { ScrollArea } from "./ui/scroll-area";
 import Logo from "./Logo.vue";
+import { ScrollArea } from "./ui/scroll-area";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const open = ref(false);
 </script>
@@ -13,7 +13,7 @@ const open = ref(false);
   <Sheet v-model:open="open">
     <SheetTrigger as-child>
       <Button
-        variant="ghost"
+        variant="transparent"
         class="text-white/70 flex-shrink-0 px-2 mr-2 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
       >
         <svg

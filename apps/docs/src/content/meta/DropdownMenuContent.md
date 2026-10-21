@@ -22,7 +22,7 @@
   },
   {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
     'default': '\'div\''
@@ -63,6 +63,13 @@
     'description': '<p>Whether to hide the content when the trigger becomes fully occluded.</p>\n',
     'type': 'boolean',
     'required': false
+  },
+  {
+    'name': 'inset',
+    'description': '<p>Offset the start padding when the menu contains checkbox or radio items.</p>\n',
+    'type': 'boolean',
+    'required': false,
+    'default': 'false'
   },
   {
     'name': 'loop',

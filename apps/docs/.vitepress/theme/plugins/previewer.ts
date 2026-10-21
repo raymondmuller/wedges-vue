@@ -7,7 +7,7 @@ export default function (md: MarkdownRenderer) {
     md.renderer.rules[type] = (tokens, idx, options, env, self) => {
       const token = tokens[idx];
       const content = token.content.trim();
-      if (!content.match(/^<ComponentPreview\s/) || !content.endsWith("/>"))
+      if (!/^<ComponentPreview\s/.test(content) || !content.endsWith("/>"))
         return defaultRender!(tokens, idx, options, env, self);
 
       const props = parseProps(content);

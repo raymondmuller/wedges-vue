@@ -12,7 +12,7 @@ export interface ClosableProps {
    * This can be used to handle the removal of the tag.
    * If provided, the close icon will be displayed.
    */
-  onClose?: Function;
+  onClose?: (event: MouseEvent) => void;
 }
 
 interface NotClosableProps {

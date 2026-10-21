@@ -9,7 +9,7 @@
   },
   {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
     'default': '\'div\''
@@ -34,8 +34,8 @@
   },
   {
     'name': 'dir',
-    'description': '<p>The reading direction of the combobox when applicable. &lt;br&gt; If omitted, inherits globally from <code>DirectionProvider</code> or assumes LTR (left-to-right) reading mode.</p>\n',
-    'type': '\'ltr\' | \'rtl\'',
+    'description': '<p>The reading direction of the combobox when applicable. &lt;br&gt; If omitted, inherits globally from <code>ConfigProvider</code> or assumes LTR (left-to-right) reading mode.</p>\n',
+    'type': 'Direction',
     'required': false
   },
   {
@@ -101,7 +101,7 @@
   {
     'name': 'orientation',
     'description': '<p>The orientation of the slider.</p>\n',
-    'type': '\'horizontal\' | \'vertical\'',
+    'type': 'DataOrientation',
     'required': false
   },
   {

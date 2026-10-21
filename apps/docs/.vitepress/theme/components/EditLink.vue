@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { EditIcon } from "@iconicicons/vue3";
 import { useData } from "vitepress";
 import { computed } from "vue";
 import { Button } from "wedges-vue";
-import { EditIcon } from "@iconicicons/vue3";
 
 const { theme, page } = useData();
 
@@ -20,7 +20,7 @@ const link = computed(() => {
 </script>
 
 <template>
-  <Button as="a" :href="link.url" target="_blank" :variant="'ghost'" class="underline mt-8">
+  <Button as="a" :href="link.url" target="_blank" variant="transparent" class="underline mt-8">
     <EditIcon class="mr-2" />
     {{ link.text }}
   </Button>

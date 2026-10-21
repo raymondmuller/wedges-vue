@@ -6,8 +6,8 @@
 
 # Wedges
 
-[![](https://img.shields.io/npm/v/raymondmuller/wedges-vue?style=plastic)](https://www.npmjs.com/package/raymondmuller/wedges-vue)
-[![](https://img.shields.io/npm/dw/raymondmuller/wedges-vue?style=plastic)](https://www.npmjs.com/package/raymondmuller/wedges-vue)
+[![npm version](https://img.shields.io/npm/v/raymondmuller/wedges-vue?style=plastic)](https://www.npmjs.com/package/raymondmuller/wedges-vue)
+[![npm downloads](https://img.shields.io/npm/dw/raymondmuller/wedges-vue?style=plastic)](https://www.npmjs.com/package/raymondmuller/wedges-vue)
 
 Wedges Vue is an ever-expanding, open-source Vue UI library built with the Wedges Design System, Radix primitives, and Tailwind CSS.
 

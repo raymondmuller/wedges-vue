@@ -2,14 +2,8 @@
 
 <PropsTable :data="[
   {
-    'name': 'alignLabels',
-    'description': '<p>Alignment of the labels: &quot;start&quot; (usually left) or &quot;end&quot; (usually right).</p>\n',
-    'type': '\'start\' | \'end\'',
-    'required': false
-  },
-  {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
     'default': '\'div\''
@@ -24,7 +18,8 @@
     'name': 'checked',
     'description': '<p>The controlled state of the switch. Can be bind as <code>v-model:checked</code>.</p>\n',
     'type': 'boolean',
-    'required': false
+    'required': false,
+    'default': 'false'
   },
   {
     'name': 'defaultChecked',
@@ -91,5 +86,13 @@
     'description': '<p>The value given as data when submitted with a <code>name</code>.</p>\n',
     'type': 'string',
     'required': false
+  }
+]" />
+
+<EmitsTable :data="[
+  {
+    'name': 'update:checked',
+    'description': '',
+    'type': '[value: boolean]'
   }
 ]" />

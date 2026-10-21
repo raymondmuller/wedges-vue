@@ -1,20 +1,20 @@
 <script setup lang="ts">
 import type { RadioGroupItemProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import type { RadioGroupContextProps } from "./types";
 import {
   RadioGroupIndicator,
   RadioGroupItem,
   useForwardProps,
   useId,
 } from "radix-vue";
-import type { HTMLAttributes } from "vue";
 import { computed, inject } from "vue";
-import LabelHelper from "../label/LabelHelper.vue";
-import Label from "../label/Label.vue";
-import type { RadioGroupContextProps } from "./types";
 import { cn } from "@/lib/utils";
+import Label from "../label/Label.vue";
+import LabelHelper from "../label/LabelHelper.vue";
 
 defineOptions({
-  name: "RadioGroupItem"
+  name: "RadioGroupItem",
 });
 
 const props = defineProps<

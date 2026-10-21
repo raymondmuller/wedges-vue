@@ -1,20 +1,20 @@
 <script setup lang="ts">
 import type { SwitchRootEmits } from "radix-vue";
+import type { HTMLAttributes } from "vue";
+import type { SwitchGroupContextProps } from "../switch-group/types";
+import type { SwitchProps } from "./types";
 import {
   SwitchRoot,
   SwitchThumb,
   useForwardPropsEmits,
   useId,
 } from "radix-vue";
-import type { HTMLAttributes } from "vue";
 import { computed, inject } from "vue";
-import type { SwitchGroupContextProps } from "../switch-group/types";
-import SwitchLabel from "./SwitchLabel.vue";
-import type { SwitchProps } from "./types";
 import { cn } from "@/lib/utils";
+import SwitchLabel from "./SwitchLabel.vue";
 
 defineOptions({
-  name: "Switch"
+  name: "Switch",
 });
 
 const props = withDefaults(

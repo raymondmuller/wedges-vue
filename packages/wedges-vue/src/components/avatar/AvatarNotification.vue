@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { notificationClasses } from "./variants";
 import { cn } from "@/lib/utils";
+import { notificationClasses } from "./variants";
 
 defineOptions({
-  name: "AvatarNotification"
+  name: "AvatarNotification",
 });
 
 const props = withDefaults(

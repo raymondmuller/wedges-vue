@@ -6,13 +6,13 @@ import TooltipRoot from "./TooltipRoot.vue";
 import TooltipTrigger from "./TooltipTrigger.vue";
 
 defineOptions({
-  name: "Tooltip"
+  name: "Tooltip",
 });
 
 const props = withDefaults(
   defineProps<
-    TooltipRootProps &
-    TooltipContentProps & {
+    TooltipRootProps
+    & TooltipContentProps & {
       asChild?: boolean;
       content?: string;
       color?: "primary" | "secondary" | "soft";

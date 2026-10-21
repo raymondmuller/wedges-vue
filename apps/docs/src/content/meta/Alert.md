@@ -14,10 +14,16 @@
     'required': false
   },
   {
+    'name': 'onClose',
+    'description': '<p>An optional callback function to be called when the close icon is clicked.\nThis can be used to handle the removal of the tag.\nIf provided, the close icon will be displayed.</p>\n',
+    'type': '((e: MouseEvent) => void) | (((e: MouseEvent) => void) & ((e: MouseEvent) => void))',
+    'required': false
+  },
+  {
     'name': 'title',
     'description': '',
     'type': 'string',
-    'required': true
+    'required': false
   },
   {
     'name': 'variant',

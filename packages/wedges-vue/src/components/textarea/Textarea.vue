@@ -1,13 +1,13 @@
 <script setup lang="ts">
+import type { TextareaProps } from "./types";
 import { useForwardPropsEmits, useId } from "radix-vue";
 import { computed } from "vue";
+import { cn } from "@/lib/utils";
 import Label from "../label/Label.vue";
 import LabelHelper from "../label/LabelHelper.vue";
-import type { TextareaProps } from "./types";
-import { cn } from "@/lib/utils";
 
 defineOptions({
-  name: "Textarea"
+  name: "Textarea",
 });
 
 const props = defineProps<TextareaProps>();

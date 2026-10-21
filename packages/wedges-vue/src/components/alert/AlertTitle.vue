@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import type { HTMLAttributes, Ref } from "vue";
+import type { AlertTitleVariants } from "./variants";
 import { Slot } from "radix-vue";
-import { type HTMLAttributes, type Ref, onMounted, ref } from "vue";
-import { type AlertTitleVariants, alertTitleVariants } from "./variants";
+import { onMounted, ref } from "vue";
 import { cn, refHasTextNode } from "@/lib/utils";
+import { alertTitleVariants } from "./variants";
 
 defineOptions({
   name: "AlertTitle",

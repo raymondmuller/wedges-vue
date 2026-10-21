@@ -4,7 +4,7 @@
   {
     'name': 'variant',
     'description': '',
-    'type': '\'default\' | \'inline\' | null',
+    'type': '\'inline\' | \'default\' | null',
     'required': false
   }
 ]" />

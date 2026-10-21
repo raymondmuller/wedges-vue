@@ -1,6 +1,8 @@
-import { type ClassValue, clsx } from "clsx";
+import type { ClassValue } from "clsx";
+import type { Ref, Slot, VNode } from "vue";
+import { clsx } from "clsx";
 import { extendTailwindMerge } from "tailwind-merge";
-import { Comment, Fragment, type Ref, type Slot, Text, type VNode } from "vue";
+import { Comment, Fragment, Text } from "vue";
 
 /**
  * twMerge with extended options.

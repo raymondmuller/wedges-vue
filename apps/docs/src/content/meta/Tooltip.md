@@ -27,7 +27,7 @@
   },
   {
     'name': 'as',
-    'description': '<p>The element or component this component should render as. Can be overwrite by <code>asChild</code></p>\n',
+    'description': '<p>The element or component this component should render as. Can be overwritten by <code>asChild</code>.</p>\n',
     'type': 'AsTag | Component',
     'required': false,
     'default': '\'div\''
@@ -103,6 +103,12 @@
     'default': 'false'
   },
   {
+    'name': 'forceMount',
+    'description': '<p>Used to force mounting when more control is needed. Useful when\ncontrolling animation with Vue animation libraries.</p>\n',
+    'type': 'boolean',
+    'required': false
+  },
+  {
     'name': 'hideWhenDetached',
     'description': '<p>Whether to hide the content when the trigger becomes fully occluded.</p>\n',
     'type': 'boolean',
@@ -112,6 +118,12 @@
     'name': 'ignoreNonKeyboardFocus',
     'description': '<p>Prevent the tooltip from opening if the focus did not come from\nthe keyboard by matching against the <code>:focus-visible</code> selector.\nThis is useful if you want to avoid opening it when switching\nbrowser tabs or closing a dialog.</p>\n',
     'type': 'boolean',
+    'required': false
+  },
+  {
+    'name': 'onOpenChange',
+    'description': '',
+    'type': '((e: MouseEvent) => void)',
     'required': false
   },
   {

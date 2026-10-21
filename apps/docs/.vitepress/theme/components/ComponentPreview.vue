@@ -3,7 +3,7 @@ import { CodeIcon, EyeIcon, MoonIcon, SunIcon } from "@iconicicons/vue3";
 import { useToggle } from "@vueuse/core";
 import { codeToHtml } from "shiki";
 import { useData } from "vitepress";
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref } from "vue";
 import { Button, Tabs, TabsContent, TabsList, TabsTrigger } from "wedges-vue";
 import { cn } from "wedges-vue/utils";
 import { cssVariables } from "../config/shiki";
@@ -24,9 +24,9 @@ const codeHtml = ref("");
 
 const { isDark } = useData();
 
-const toggleDark = function () {
+function toggleDark() {
   useToggle(isDark)();
-};
+}
 
 onMounted(async () => {
   try {
