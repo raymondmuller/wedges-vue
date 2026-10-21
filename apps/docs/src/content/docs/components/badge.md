@@ -28,4 +28,4 @@ The `Badge` component also includes the following props:
 
 ### Default
 
-<ComponentPreview name="BagdeExampleOne"  />
+<ComponentPreview name="BadgeExampleOne"  />

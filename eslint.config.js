@@ -8,6 +8,7 @@ export default antfu(
       quotes: "double",
       semi: true,
     },
+    ignores: ["vendor/**"],
   },
   {
     files: ["**/*.vue"],
@@ -22,6 +23,13 @@ export default antfu(
     rules: {
       // These settings belong to pnpm 10+. This repo is on pnpm 9.
       "pnpm/yaml-enforce-settings": "off",
+    },
+  },
+  {
+    files: ["package.json"],
+    rules: {
+      // Moving pnpm settings into pnpm-workspace.yaml needs pnpm 10.6+.
+      "pnpm/json-prefer-workspace-settings": "off",
     },
   },
   {
